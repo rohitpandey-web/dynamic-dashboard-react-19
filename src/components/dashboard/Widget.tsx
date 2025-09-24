@@ -81,13 +81,13 @@ const DataVisualization = ({ widget }: { widget: WidgetType }) => {
           </div>
         </div>
         <div className="flex-shrink-0 space-y-2 text-sm w-full sm:w-auto">
-          <div className="flex items-center gap-2 justify-center sm:justify-start">
-            <div className="w-3 h-3 rounded-full bg-success"></div>
-            <span>Connected ({widget.data.connected})</span>
+          <div className="flex items-center gap-2 justify-center sm:justify-start min-w-0">
+            <div className="w-3 h-3 rounded-full bg-success flex-shrink-0"></div>
+            <span className="truncate">Connected ({widget.data.connected})</span>
           </div>
-          <div className="flex items-center gap-2 justify-center sm:justify-start">
-            <div className="w-3 h-3 rounded-full bg-destructive"></div>
-            <span>Not Connected ({widget.data.notConnected})</span>
+          <div className="flex items-center gap-2 justify-center sm:justify-start min-w-0">
+            <div className="w-3 h-3 rounded-full bg-destructive flex-shrink-0"></div>
+            <span className="truncate">Not Connected ({widget.data.notConnected})</span>
           </div>
         </div>
       </div>
@@ -139,21 +139,21 @@ const DataVisualization = ({ widget }: { widget: WidgetType }) => {
           </div>
         </div>
         <div className="flex-shrink-0 space-y-2 text-xs w-full sm:w-auto">
-          <div className="flex items-center gap-2 justify-center sm:justify-start">
-            <div className="w-3 h-3 rounded-full bg-destructive"></div>
-            <span>Failed ({widget.data.failed})</span>
+          <div className="flex items-center gap-2 justify-center sm:justify-start min-w-0">
+            <div className="w-3 h-3 rounded-full bg-destructive flex-shrink-0"></div>
+            <span className="truncate">Failed ({widget.data.failed})</span>
           </div>
-          <div className="flex items-center gap-2 justify-center sm:justify-start">
-            <div className="w-3 h-3 rounded-full bg-warning"></div>
-            <span>Warning ({widget.data.warning})</span>
+          <div className="flex items-center gap-2 justify-center sm:justify-start min-w-0">
+            <div className="w-3 h-3 rounded-full bg-warning flex-shrink-0"></div>
+            <span className="truncate">Warning ({widget.data.warning})</span>
           </div>
-          <div className="flex items-center gap-2 justify-center sm:justify-start">
-            <div className="w-3 h-3 rounded-full bg-muted-foreground"></div>
-            <span>Not available ({widget.data.notAvailable})</span>
+          <div className="flex items-center gap-2 justify-center sm:justify-start min-w-0">
+            <div className="w-3 h-3 rounded-full bg-muted-foreground flex-shrink-0"></div>
+            <span className="truncate">Not available ({widget.data.notAvailable})</span>
           </div>
-          <div className="flex items-center gap-2 justify-center sm:justify-start">
-            <div className="w-3 h-3 rounded-full bg-success"></div>
-            <span>Passed ({widget.data.passed})</span>
+          <div className="flex items-center gap-2 justify-center sm:justify-start min-w-0">
+            <div className="w-3 h-3 rounded-full bg-success flex-shrink-0"></div>
+            <span className="truncate">Passed ({widget.data.passed})</span>
           </div>
         </div>
       </div>
@@ -191,13 +191,13 @@ const DataVisualization = ({ widget }: { widget: WidgetType }) => {
           
           {/* Legend */}
           <div className="flex flex-wrap gap-3 sm:gap-4 text-xs sm:text-sm justify-center sm:justify-start">
-            <div className="flex items-center gap-2">
-              <div className="w-3 h-3 rounded-full bg-destructive"></div>
-              <span>Critical ({widget.data.critical})</span>
+            <div className="flex items-center gap-2 min-w-0">
+              <div className="w-3 h-3 rounded-full bg-destructive flex-shrink-0"></div>
+              <span className="truncate">Critical ({widget.data.critical})</span>
             </div>
-            <div className="flex items-center gap-2">
-              <div className="w-3 h-3 rounded-full bg-warning"></div>
-              <span>High ({widget.data.high})</span>
+            <div className="flex items-center gap-2 min-w-0">
+              <div className="w-3 h-3 rounded-full bg-warning flex-shrink-0"></div>
+              <span className="truncate">High ({widget.data.high})</span>
             </div>
           </div>
         </div>
