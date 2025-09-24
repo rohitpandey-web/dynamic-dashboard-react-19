@@ -53,8 +53,8 @@ const DataVisualization = ({ widget }: { widget: WidgetType }) => {
     };
 
     return (
-      <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-4">
-        <div className="relative flex-1 w-full sm:w-auto">
+      <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-4 overflow-hidden">
+        <div className="relative flex-1 w-full sm:w-auto min-w-0">
           <ChartContainer config={chartConfig} className="h-[180px] sm:h-[200px] w-full">
             <PieChart>
               <Pie
@@ -80,14 +80,14 @@ const DataVisualization = ({ widget }: { widget: WidgetType }) => {
             </div>
           </div>
         </div>
-        <div className="flex-shrink-0 space-y-1.5 text-xs sm:text-sm w-full sm:w-auto sm:max-w-[140px] lg:max-w-[160px]">
-          <div className="flex items-center gap-1.5 justify-center sm:justify-start">
+        <div className="w-full sm:w-32 lg:w-36 flex-shrink-0 space-y-1.5 overflow-hidden">
+          <div className="flex items-center gap-1.5 justify-center sm:justify-start overflow-hidden">
             <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-success flex-shrink-0"></div>
-            <span className="truncate text-[10px] sm:text-xs lg:text-sm">Connected ({widget.data.connected})</span>
+            <span className="text-[10px] sm:text-xs font-medium truncate min-w-0">Connected ({widget.data.connected})</span>
           </div>
-          <div className="flex items-center gap-1.5 justify-center sm:justify-start">
+          <div className="flex items-center gap-1.5 justify-center sm:justify-start overflow-hidden">
             <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-destructive flex-shrink-0"></div>
-            <span className="truncate text-[10px] sm:text-xs lg:text-sm">Not Connected ({widget.data.notConnected})</span>
+            <span className="text-[10px] sm:text-xs font-medium truncate min-w-0">Not Connected ({widget.data.notConnected})</span>
           </div>
         </div>
       </div>
@@ -111,8 +111,8 @@ const DataVisualization = ({ widget }: { widget: WidgetType }) => {
     };
 
     return (
-      <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-4">
-        <div className="relative flex-1 w-full sm:w-auto">
+      <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-4 overflow-hidden">
+        <div className="relative flex-1 w-full sm:w-auto min-w-0">
           <ChartContainer config={chartConfig} className="h-[180px] sm:h-[200px] w-full">
             <PieChart>
               <Pie
@@ -138,22 +138,22 @@ const DataVisualization = ({ widget }: { widget: WidgetType }) => {
             </div>
           </div>
         </div>
-        <div className="flex-shrink-0 space-y-1 w-full sm:w-auto sm:max-w-[140px] lg:max-w-[180px]">
-          <div className="flex items-center gap-1.5 justify-center sm:justify-start">
-            <div className="w-2.5 h-2.5 rounded-full bg-destructive flex-shrink-0"></div>
-            <span className="truncate text-[9px] sm:text-[10px] lg:text-xs">Failed ({widget.data.failed})</span>
+        <div className="w-full sm:w-32 lg:w-40 flex-shrink-0 space-y-1 overflow-hidden">
+          <div className="flex items-center gap-1 justify-center sm:justify-start overflow-hidden">
+            <div className="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full bg-destructive flex-shrink-0"></div>
+            <span className="text-[9px] sm:text-[10px] font-medium truncate min-w-0">Failed ({widget.data.failed})</span>
           </div>
-          <div className="flex items-center gap-1.5 justify-center sm:justify-start">
-            <div className="w-2.5 h-2.5 rounded-full bg-warning flex-shrink-0"></div>
-            <span className="truncate text-[9px] sm:text-[10px] lg:text-xs">Warning ({widget.data.warning})</span>
+          <div className="flex items-center gap-1 justify-center sm:justify-start overflow-hidden">
+            <div className="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full bg-warning flex-shrink-0"></div>
+            <span className="text-[9px] sm:text-[10px] font-medium truncate min-w-0">Warning ({widget.data.warning})</span>
           </div>
-          <div className="flex items-center gap-1.5 justify-center sm:justify-start">
-            <div className="w-2.5 h-2.5 rounded-full bg-muted-foreground flex-shrink-0"></div>
-            <span className="truncate text-[9px] sm:text-[10px] lg:text-xs">Not available ({widget.data.notAvailable})</span>
+          <div className="flex items-center gap-1 justify-center sm:justify-start overflow-hidden">
+            <div className="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full bg-muted-foreground flex-shrink-0"></div>
+            <span className="text-[9px] sm:text-[10px] font-medium truncate min-w-0">Not available ({widget.data.notAvailable})</span>
           </div>
-          <div className="flex items-center gap-1.5 justify-center sm:justify-start">
-            <div className="w-2.5 h-2.5 rounded-full bg-success flex-shrink-0"></div>
-            <span className="truncate text-[9px] sm:text-[10px] lg:text-xs">Passed ({widget.data.passed})</span>
+          <div className="flex items-center gap-1 justify-center sm:justify-start overflow-hidden">
+            <div className="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full bg-success flex-shrink-0"></div>
+            <span className="text-[9px] sm:text-[10px] font-medium truncate min-w-0">Passed ({widget.data.passed})</span>
           </div>
         </div>
       </div>
