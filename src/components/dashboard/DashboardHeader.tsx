@@ -95,9 +95,9 @@ export const DashboardHeader = () => {
 
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
-                  <Button variant="outline" size="sm" className="hidden sm:flex items-center gap-1">
-                    <Calendar className="w-4 h-4 text-primary" />
-                    {timeRange}
+                  <Button variant="outline" size="sm" className="hidden sm:flex items-center gap-1.5 bg-gradient-to-r from-blue-500/10 to-purple-500/10 border-blue-300/50 hover:from-blue-500/20 hover:to-purple-500/20">
+                    <Calendar className="w-4 h-4 text-blue-600" />
+                    <span className="text-sm font-medium">{timeRange}</span>
                   </Button>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent align="end">
